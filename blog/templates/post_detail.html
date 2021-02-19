@@ -1,0 +1,9 @@
+{%extends "base/base.html"%}
+<title>{% block title %}{{post.title}}{% endblock %}</title>
+{% block content %}
+<div style="border:3px #00B344  solid;">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    <p class="text-right ">Запись создана {{ post.created_at }}</p>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{%extends "base/base.html"%}
+{% block title %}Вход{% endblock %}
+{% block content %}
+    <div class="col-md-auto">
+        <h1 class="h3 mb-3 font-weight-normal" align="center" >Введите свои данные</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <button  type="submit">Войти</button>
+        </form>
+    </div>
+{% endblock %}

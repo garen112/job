@@ -1,0 +1,12 @@
+{%extends "base/base.html"%}
+
+{% block content %}
+<h3>Блоги пользователей</h3>
+{% for blog in blogs %}
+    <div>
+        <h1><a href="{% url 'blog:blog_detail' blog.slug %}">{{ blog.title }}</a></h1>
+        <p>{{ blog.description }}</p>
+        <p class="text-right ">Автор блога: {{ blog.author }}</p>
+    </div>
+{% endfor %}
+{% endblock %}
